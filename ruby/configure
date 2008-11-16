@@ -1,0 +1,12 @@
+#!/usr/bin/ruby
+require 'mkmf'
+
+`cp ../src/* ./`
+`cp ../README.txt ./README`
+
+$CFLAGS += ' -std=gnu99 -ffast-math'
+create_makefile('chipmunk')
+
+f = open('Makefile').read
+f.sub!('RUBYARCHDIR   = $(sitearchdir)$(target_prefix)', 'RUBYARCHDIR   = $(rubylibdir)$(target_prefix)')
+File.new('Makefile','w').puts(f)

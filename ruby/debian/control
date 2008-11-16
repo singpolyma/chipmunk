@@ -1,0 +1,14 @@
+Source: libchipmunk-ruby
+Priority: extra
+Maintainer: Stephen Paul Weber <singpolyma@singpolyma.net>
+Build-Depends: debhelper (>= 5), ruby (>= 1.8.0)
+Standards-Version: 3.7.2
+Section: libs
+Homepage: http://wiki.slembcke.net/main/published/Chipmunk
+
+Package: libchipmunk-ruby
+Section: libs
+Architecture: any
+Depends: ruby (>= 1.8.0), ${shlibs:Depends}, ${misc:Depends}
+Description: Chipmunk is a physics library written in C.
+ This is the ruby bindings.
